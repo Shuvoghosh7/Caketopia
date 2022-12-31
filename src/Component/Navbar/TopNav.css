@@ -1,0 +1,13 @@
+.top-banner{
+    display: flex;
+    justify-content: space-around;
+    background: #243a6e;
+    padding: 15px;
+    color: #fff;
+}
+.top-contact{
+    display: flex;
+}
+.space-bar{
+    color: #FC7C7C;
+}
