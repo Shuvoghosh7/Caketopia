@@ -1,10 +1,51 @@
 .banner{
     background-image: url(../../Assets/barrer/banner.png);
-    min-height: 459px;
+    min-height: 559px;
     width: 100%;
     /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+.banner-contant{
+    position: relative;
+    top: 110px;
+    left: 80px;
+}
+.offer-title{
+    color: #fff;
+    font-size: 30px;
+    line-height: 31px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+.offer-persen{
+    color: #FC7C7C;
+}
+.banner-title{
+    font-size: 65px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.shop-btn{
+    font-size: 18px;
+    line-height: 70px;
+    height: 70px;
+    padding: 0 45px;
+    background: #fc7c7c;
+    position: relative;
+    z-index: 9;
+    color: #ffffff;
+    border: 0;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+.shop-btn:hover{
+    background-color: #0a58ca;
 }
