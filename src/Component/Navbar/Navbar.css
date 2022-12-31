@@ -44,6 +44,12 @@ a {
   background: rgb(204, 204, 204);
   transition: 0.3s ease-in;
 }
+.nav__link{
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #454545;
+}
 
 @media screen and (max-width: 768px) {
   .nav__toggler {
@@ -52,14 +58,19 @@ a {
   }
   .nav__menu {
     position: fixed;
-    top: 7vh;
+    top: 30vh;
     right: 0;
-    height: 93vh;
-    width: 50vw;
-    background: rgb(0, 33, 65);
+    height: 70vh;
+    width: 45vw;
+    background: rgb(255, 255, 255);
+    color: black;
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+    gap: 1rem;
+  }
+  .nav__link{
+    font-weight: bold;
   }
   
 }

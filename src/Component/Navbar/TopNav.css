@@ -11,3 +11,15 @@
 .space-bar{
     color: #FC7C7C;
 }
+
+@media screen and (max-width: 768px) {
+    .top-banner{
+        display: flex;
+        justify-content: space-around;
+    }
+    .top-contact{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

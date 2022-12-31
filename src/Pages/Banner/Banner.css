@@ -9,8 +9,8 @@
     
 }
 .banner-contant{
-    position: relative;
-    top: 110px;
+    position: absolute;
+    top: 250px;
     left: 80px;
 }
 .offer-title{
@@ -48,4 +48,18 @@
 }
 .shop-btn:hover{
     background-color: #0a58ca;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-contant{
+        position: absolute;
+        top: 410px;
+        left: 10px;
+    }
+    .offer-persen{
+        color: #fff;
+    }
+    .banner-title{
+        font-size: 35px;
+    }
 }
