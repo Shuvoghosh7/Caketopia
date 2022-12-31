@@ -1,0 +1,36 @@
+.menu-name{
+    display: flex;
+    justify-content: space-between;
+}
+.arro-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.75rem;
+}
+.menu-link{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000000;
+    font-family: "Playfair Display", serif;
+    font-size: 1.75rem;
+}
+.menu-image img{
+    width: 100%;
+}
+.menu-link:hover{
+    color: #FC7C7C;
+}
+ .menu1:hover .menu-image{
+    transform: scale(1.015);
+    transition: transform 1s ease-in;
+}
+
+.menu-image:hover {
+    outline: none !important;
+    outline-color: initial;
+    outline-style: none;
+    outline-width: initial;
+}
+
