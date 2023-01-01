@@ -1,0 +1,22 @@
+.product-title{
+    font-size: 42px;
+    margin-bottom: 0;
+    line-height: 1.3;
+    font-family: "Playfair Display", serif;
+    margin-top: 0;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 100px;
+}
+.product-item{
+    font-size: 18px;
+    line-height: 42px;
+    font-weight: 500;
+    color: #6c757d;
+    display: inline-block;
+    cursor: pointer;
+}
+.product-item:focus{
+    color: #FC7C7C;
+    text-decoration: underline;
+}
