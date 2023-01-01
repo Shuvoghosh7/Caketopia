@@ -5,7 +5,7 @@ import logo from '../../Assets/logo.png'
 import { GiSelfLove } from 'react-icons/gi';
 import { FiShoppingBag } from 'react-icons/fi';
 
-const Navbar = () => {
+const Navbar = ({size}) => {
     const [active, setActive] = useState("nav__menu");
     const [icon, setIcon] = useState("nav__toggler");
     const navToggle = () => {
@@ -48,8 +48,9 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className="nav__item">
-                    <Link to='/shopCart' className="nav__link">
-                        <FiShoppingBag className="text-2xl"/>
+                    <Link to='/shopCart' className="nav__link flex">
+                        <FiShoppingBag className="text-2xl"/> <sup>{size}</sup>
+                        
                     </Link>
                 </li>
                 

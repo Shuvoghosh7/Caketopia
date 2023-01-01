@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FeaturesCard from './FeaturesCard';
 
-const OurFeatures = () => {
+const OurFeatures = ({handleClick}) => {
     const[breakfast,setBreakfast]=useState([])
     useEffect(()=>{
         fetch('Breakfast.json')
@@ -14,6 +14,7 @@ const OurFeatures = () => {
                  breakfast.map(Feature =><FeaturesCard
                  key={Feature.id}
                  Feature={Feature}
+                 handleClick={handleClick}
                  />)  
             }
           </div>
