@@ -4,6 +4,7 @@ import './Home.css'
 import Banner from '../Home/Banner/Banner';
 
 import Menu from './Menu/Menu';
+import Mbanner from './MBanner/Mbanner';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                     <Link to="/newItems" className='product-item'>New Items</Link>
                 </div>
                 <Outlet />
+                <Mbanner/>
             </div>
             
         </div>
