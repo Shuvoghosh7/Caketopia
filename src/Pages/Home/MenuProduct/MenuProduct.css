@@ -1,0 +1,15 @@
+.mb-product-img {
+    text-align: center;
+}
+
+.mp-name {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+
+}
+
+.mp-name:hover {
+    color: #FC7C7C;
+
+}

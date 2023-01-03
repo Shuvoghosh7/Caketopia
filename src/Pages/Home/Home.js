@@ -5,6 +5,7 @@ import Banner from '../Home/Banner/Banner';
 
 import Menu from './Menu/Menu';
 import Mbanner from './MBanner/Mbanner';
+import MenuProduct from './MenuProduct/MenuProduct';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
                 </div>
                 <Outlet />
                 <Mbanner/>
+                <MenuProduct/>
             </div>
             
         </div>
