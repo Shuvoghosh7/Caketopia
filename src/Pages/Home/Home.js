@@ -6,6 +6,7 @@ import Banner from '../Home/Banner/Banner';
 import Menu from './Menu/Menu';
 import Mbanner from './MBanner/Mbanner';
 import MenuProduct from './MenuProduct/MenuProduct';
+import SpecialOffer from './SpecialOffer/SpecialOffer';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
                 <Outlet />
                 <Mbanner/>
                 <MenuProduct/>
+                <SpecialOffer/>
             </div>
             
         </div>

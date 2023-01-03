@@ -1,0 +1,83 @@
+.special-offer {
+    background-image: url(../../../Assets/SpaccileOffer/banner2.png);
+    min-height: 400px;
+    width: 100%;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.discount img {
+    position: relative;
+    top: 90px;
+    left: 120px;
+}
+
+.discount-content {
+    display: flex;
+    justify-content: center;
+    margin-left: 280px;
+    margin-top: -40px;
+
+}
+
+.discount-persent {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #2b4174;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 21px;
+}
+
+.discount-time {
+    font-size: 45px;
+    line-height: 1.3;
+    margin-bottom: 21px;
+    font-family: "Playfair Display", serif;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.discount-btn {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 35px;
+    font-size: 14px;
+    border-radius: 13px;
+    font-size: 18px;
+    line-height: 70px;
+    height: 70px;
+    padding: 0 45px;
+    background: #fc7c7c;
+    position: relative;
+    z-index: 9;
+    color: #ffffff;
+    border: 0;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.discount-btn:hover {
+    background-color: #0a58ca;
+    transition-duration: 2s;
+    transition-property: background-color, color;
+}
+
+@media screen and (max-width: 768px) {
+    .discount img {
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+    .discount-content {
+        margin-left: 140px;
+   
+    }
+}
