@@ -8,6 +8,7 @@ import BestSellers from './Pages/Products/BestSellers/BestSellers';
 import NewItems from './Pages/Products/NewItems/NewItems';
 import OurFeatures from './Pages/Products/OurFeatures/OurFeatures';
 import ShopCart from './Pages/ShopCart/ShopCart';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   let getCartData = localStorage.getItem("cartss")
@@ -58,6 +59,7 @@ function App() {
           <Route path='newItems' element={<NewItems />} />
         </Route>
         <Route path='/shopCart' element={<ShopCart cart={cart} setCart={setCart} handleChange={handleChange} />} />
+        <Route path='/blogs' element={<Blogs/>}/>
       </Routes>
       {
         warning && <div className='warning'>Item is already added to your cart</div>

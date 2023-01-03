@@ -7,6 +7,7 @@ import Menu from './Menu/Menu';
 import Mbanner from './MBanner/Mbanner';
 import MenuProduct from './MenuProduct/MenuProduct';
 import SpecialOffer from './SpecialOffer/SpecialOffer';
+import Blogs from '../Blogs/Blogs';
 
 const Home = () => {
     return (
@@ -24,6 +25,7 @@ const Home = () => {
                 <Mbanner/>
                 <MenuProduct/>
                 <SpecialOffer/>
+                <Blogs/>
             </div>
             
         </div>

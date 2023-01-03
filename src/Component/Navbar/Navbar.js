@@ -37,7 +37,7 @@ const Navbar = ({size}) => {
                     <Link to='/shop' className="nav__link">Shop</Link>
                 </li>
                 <li className="nav__item">
-                    <Link to='/blog' className="nav__link">Blog</Link>
+                    <Link to='/blogs' className="nav__link">Blog</Link>
                 </li>
                 <li className="nav__item">
                     <Link to='/blog' className="nav__link">Contact</Link>
