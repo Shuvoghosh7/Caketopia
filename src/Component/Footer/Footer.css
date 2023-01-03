@@ -1,0 +1,64 @@
+.footer-content{
+    background: #2b4174;
+    color: #fff;
+   
+}
+
+.free-shipping h3{
+    font-size: 22px;
+    line-height: 1.4;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+.free-shipping p{
+    font-size: 15px;
+    line-height: 31px;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+.Shipping{
+    border-bottom: 1px solid white;
+}
+
+
+.contact-us{
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    line-height: 1.4;
+    font-size: 22px;
+    color: #e0e0e0;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+.contact-email{
+    font-weight: 500;
+    color: #e0e0e0;
+    font-size: 18px;
+}
+.newsletter_subscribe input{
+    width: 100%;
+    font-weight: 300;
+    border: 0;
+    height: 45px;
+    border-radius: 15px;
+    padding: 0 70px 0 18px;
+    color: black;
+}
+.email-send-btn{
+    border: 0;
+    padding: 0;
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+    background: #fc7c7c;
+    color: #ffffff;
+    border-radius: 15px;
+    margin-top: 10px;
+    
+}
+.CONTACT-SECTION{
+    border-bottom: 1px solid white;
+}
