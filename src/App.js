@@ -10,6 +10,13 @@ import OurFeatures from './Pages/Products/OurFeatures/OurFeatures';
 import ShopCart from './Pages/ShopCart/ShopCart';
 import Blogs from './Pages/Blogs/Blogs';
 import Footer from './Component/Footer/Footer';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Addproduct from './Pages/Dashboard/Addproduct/Addproduct';
+import AllProduct from './Pages/Dashboard/AllProduct/AllProduct';
+import AddBlogs from './Pages/Dashboard/AddBlogs/AddBlogs';
+import SingIn from './Component/SingIn/SingIn';
+import SingUp from './Component/SingUp/SingUp';
+
 
 function App() {
   let getCartData = localStorage.getItem("cartss")
@@ -60,9 +67,19 @@ function App() {
           <Route path='newItems' element={<NewItems />} />
         </Route>
         <Route path='/shopCart' element={<ShopCart cart={cart} setCart={setCart} handleChange={handleChange} />} />
-        <Route path='/blogs' element={<Blogs/>}/>
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/singin' element={<SingIn />} />
+        <Route path='/singup' element={<SingUp />} />
+
+        <Route path='/dashboard' element={<Dashboard/>}>
+          <Route path='addProduct' element={<Addproduct/>}/>
+          <Route path='allproduct' element={<AllProduct/>}/>
+          <Route path='addBlogs' element={<AddBlogs/>}/>
+        </Route>
       </Routes>
-      <Footer/>
+
+
+      <Footer />
       {
         warning && <div className='warning'>Item is already added to your cart</div>
       }

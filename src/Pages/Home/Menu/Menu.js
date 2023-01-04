@@ -14,7 +14,7 @@ const Menu = () => {
                     <img src={Pastry} alt="" />
                 </div>
                 <p className="menu-name">
-                    <Link to="/abbo" className="menu-link">Pastry</Link>
+                    <Link to="/dashboard" className="menu-link">Pastry</Link>
                     <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
                 </p>
             </div>
@@ -23,7 +23,7 @@ const Menu = () => {
                     <img src={Breakfast} alt="" />
                 </div>
                 <p className="menu-name">
-                    <Link to="/abbo" className="menu-link">Breakfast</Link>
+                    <Link to="/dashboard" className="menu-link">Breakfast</Link>
                     <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
                 </p>
             </div>
@@ -32,7 +32,7 @@ const Menu = () => {
                     <img src={Cake} alt="" />
                 </div>
                 <p className="menu-name">
-                    <Link to="/abbo" className="menu-link">Cake</Link>
+                    <Link to="/dashboard" className="menu-link">Cake</Link>
                     <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
                 </p>
             </div>
