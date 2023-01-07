@@ -1,0 +1,31 @@
+.Checkout{
+    background-image: url(../../Assets/Checkout/breadcrumbs.png);
+    min-height: 400px;
+    width: 100%;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:30px 0px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: space-between;
+}
+.total-price span:nth-child(1){
+    font-size: 20px;
+    color: skyblue;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.total-price span:nth-child(2){
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+.order-title{
+    font-size: 16px;
+    color: #fc7c7c;
+    font-weight: 700;
+}

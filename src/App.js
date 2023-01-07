@@ -16,6 +16,7 @@ import AllProduct from './Pages/Dashboard/AllProduct/AllProduct';
 import AddBlogs from './Pages/Dashboard/AddBlogs/AddBlogs';
 import SingIn from './Component/SingIn/SingIn';
 import SingUp from './Component/SingUp/SingUp';
+import Checkout from './Pages/Checkout/Checkout';
 
 function App() {
   let getCartData = localStorage.getItem("cartss")
@@ -78,7 +79,10 @@ function App() {
           <Route path='allproduct' element={<AllProduct handleClick={handleClick} />}/>
           <Route path='addBlogs' element={<AddBlogs/>}/>
         </Route>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
+
+      
 
 
       <Footer />

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ShopCart.css'
 const ShopCart = ({ cart, setCart,handleChange }) => {
    
@@ -12,8 +13,6 @@ const ShopCart = ({ cart, setCart,handleChange }) => {
             ans += item.quantity * item.price
         ))
         setPrice(ans);
-        
-
     }
     const handleRemove = (id) =>{
         const arr = storeCart.filter((item)=>item._id !== id);
@@ -30,7 +29,7 @@ const ShopCart = ({ cart, setCart,handleChange }) => {
                     <div className="cart_box" key={item.id}>
                         <div className="cart_img">
                             <img src={`http://localhost:5000/api/v1/${item.imageUrl}`} />
-                            <p>{item.name}</p>
+                            <p>{item.productName}</p>
                         </div>
                         <div>
                             <button onClick={()=>handleChange(item, +1)}> + </button>
@@ -44,9 +43,13 @@ const ShopCart = ({ cart, setCart,handleChange }) => {
                     </div>
                 ))}
             <div className='total'>
-                <span>Total Price of your Cart</span>
+                <span>Total Price </span>
                 <span>Rs - {price}</span>
             </div>
+            <div className='text-center mt-10 mb-20'>
+                <Link to='/checkout' className='text-2xl Checkout-btn'>Checkout</Link>
+            </div>
+
         </article>
     );
 };
