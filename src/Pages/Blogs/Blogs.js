@@ -5,7 +5,6 @@ import BlogsCard from './BlogsCard';
 
 const Blogs = () => {
     const[blogs,setBlogs]=useState([])
-    console.log(blogs)
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/comments')
         .then(res => res.json())

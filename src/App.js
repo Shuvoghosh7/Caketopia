@@ -26,7 +26,7 @@ function App() {
   const handleClick = (item) => {
     let isPresent = false;
     storeCartData.forEach((product) => {
-      if (item.id === product.id)
+      if (item._id === product._id)
         isPresent = true;
     })
     if (isPresent) {
@@ -44,14 +44,14 @@ function App() {
   const handleChange = (item, d) => {
     let ind = -1;
     storeCartData.forEach((data, index) => {
-      if (data.id === item.id)
+      if (data._id === item._id)
         ind = index;
     });
     const tempArr = storeCartData;
-    tempArr[ind].amount += d;
+    tempArr[ind].quantity += d;
 
-    if (tempArr[ind].amount === 0)
-      tempArr[ind].amount = 1;
+    if (tempArr[ind].quantity === 0)
+      tempArr[ind].quantity = 1;
     setCart([...tempArr])
     let dd = [...tempArr]
     localStorage.setItem("cartss", JSON.stringify(dd))

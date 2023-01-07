@@ -4,14 +4,14 @@ import { FiShoppingBag } from 'react-icons/fi';
 import { BsEyeSlashFill } from 'react-icons/bs';
 
 const FeaturesCard = ({ Feature,handleClick }) => {
-    const { picture, name, description, price } = Feature
+    const { imageUrl, productName, description, price } = Feature
     return (
         <div className='Features-card'>
             <div className='Features-img'>
-                <img src={picture} alt="" />
+                <img src={`http://localhost:5000/api/v1/${imageUrl}`} alt="" />
             </div>
             <p className='text-center details-btn'>
-                <button className='mt-10' onClick={()=>handleClick(Feature)}>
+                <button className='mt-1' onClick={()=>handleClick(Feature)}>
                     <FiShoppingBag className='text-2xl shop-icon' />
                 </button>
                 <button>
@@ -30,7 +30,7 @@ const FeaturesCard = ({ Feature,handleClick }) => {
                 </button>
 
             </p>
-            <p className='text-center product-name'>{name}</p>
+            <p className='text-center product-name'>{productName}</p>
             <p className='text-center product-price'>${price}</p>
 
         </div >
