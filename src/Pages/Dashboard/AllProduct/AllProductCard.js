@@ -1,13 +1,11 @@
 import React from 'react';
-import './FeaturesCard.css'
 import { FiShoppingBag } from 'react-icons/fi';
 import { BsEyeSlashFill } from 'react-icons/bs';
 
-const FeaturesCard = ({ Feature,handleClick }) => {
+const AllProductCard = ({ Feature,handleClick }) => {
     const { imageUrl, productName, description, price } = Feature
-
     return (
-        <div className='Features-card'>
+        <div className='Features-card mx-5 my-3'>
             <div className='Features-img'>
                 <img src={`http://localhost:5000/api/v1/${imageUrl}`} alt="" />
             </div>
@@ -38,4 +36,4 @@ const FeaturesCard = ({ Feature,handleClick }) => {
     );
 };
 
-export default FeaturesCard;
+export default AllProductCard;

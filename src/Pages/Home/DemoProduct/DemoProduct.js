@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import FeaturesCard from './FeaturesCard';
+import React from 'react';
 import { useQuery } from 'react-query';
+import DemoProductCard from './DemoProductCard';
 
-const OurFeatures = ({ handleClick }) => {
-  
+const DemoProduct = ({ handleClick }) => {
     const { isLoading, error, data: products } = useQuery('products', () =>
         fetch('http://localhost:5000/api/v1/product').then(res =>
             res.json()
@@ -13,11 +12,10 @@ const OurFeatures = ({ handleClick }) => {
     if (isLoading) {
         return <h1>loading ...</h1>
     }
-    
     return (
         <div className='grid lg:grid-cols-4 gap-10 mx-12 mt-10'>
             {
-                products?.map(Feature => <FeaturesCard
+                products?.map(Feature => <DemoProductCard
                     key={Feature.id}
                     Feature={Feature}
                     handleClick={handleClick}
@@ -27,4 +25,4 @@ const OurFeatures = ({ handleClick }) => {
     );
 };
 
-export default OurFeatures;
+export default DemoProduct;

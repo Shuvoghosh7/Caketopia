@@ -1,11 +1,9 @@
 import React from 'react';
-import './FeaturesCard.css'
 import { FiShoppingBag } from 'react-icons/fi';
 import { BsEyeSlashFill } from 'react-icons/bs';
 
-const FeaturesCard = ({ Feature,handleClick }) => {
+const DemoProductCard = ({ Feature,handleClick }) => {
     const { imageUrl, productName, description, price } = Feature
-
     return (
         <div className='Features-card'>
             <div className='Features-img'>
@@ -38,4 +36,4 @@ const FeaturesCard = ({ Feature,handleClick }) => {
     );
 };
 
-export default FeaturesCard;
+export default DemoProductCard;

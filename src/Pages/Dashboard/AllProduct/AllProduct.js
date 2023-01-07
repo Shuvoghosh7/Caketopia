@@ -1,10 +1,26 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import AllProductCard from './AllProductCard';
 
-const AllProduct = () => {
+const AllProduct = ({ handleClick }) => {
+    const { isLoading, error, data: products } = useQuery('products', () =>
+        fetch('http://localhost:5000/api/v1/product').then(res =>
+            res.json()
+        )
+    )
+
+    if (isLoading) {
+        return <h1>loading ...</h1>
+    }
     return (
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique alias molestias voluptate omnis, incidunt cumque mollitia, iste dolore cum enim! Est, id recusandae? Doloremque rem dolor cupiditate! Laboriosam, ipsum!
-            
+        <div className='grid lg:grid-cols-3 gap-10 mx-12 mt-10'>
+            {
+                products?.map(Feature => <AllProductCard
+                    key={Feature.id}
+                    Feature={Feature}
+                    handleClick={handleClick}
+                />)
+            }
         </div>
     );
 };
