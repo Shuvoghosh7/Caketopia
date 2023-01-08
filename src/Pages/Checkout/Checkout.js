@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './Checkout.css'
-const Checkout = () => {
-    const [totalPrice, settotalPrice] = useState(0);
+
+
+const Checkout = ({ props }) => {
+    const [totalPrice, settotalPrice] = useState(0); 
     const { register, handleSubmit } = useForm();
     let getCart = localStorage.getItem("cartss")
     let storeCart = JSON.parse(getCart)
-
     const handlePrice = () => {
         let ans = 0;
         storeCart.map((item) => (
@@ -14,12 +15,19 @@ const Checkout = () => {
         ))
         settotalPrice(ans);
     }
+
     useEffect(() => {
         handlePrice();
     })
+
+    const productname= storeCart?.map(item =>  `${item.productName} * ${item.quantity}`);
+
+    const productImage= storeCart?.map(item =>  `${item.imageUrl}`);
+   
     const onSubmit = async (data) => {
-        
         const orderedProduct = {
+            productImage:productImage,
+            productname:productname,
             totalPrice: totalPrice,
             country: data.country,
             firstName: data.firstName,
@@ -31,6 +39,8 @@ const Checkout = () => {
         console.log(orderedProduct)
 
     }
+
+
     return (
         <div className=' my-5 lg:flex md:flex  justify-around Checkout'>
             {/* YOUR ORDER */}
@@ -43,9 +53,11 @@ const Checkout = () => {
                             storeCart?.map((item) => (
                                 <div className="cart_box" key={item.id}>
                                     <div className="cart_img">
+                                        <img src={`http://localhost:5000/api/v1/${item.imageUrl}`} />
                                         <p>{item.productName} * {item.quantity} </p>
+
                                     </div>
-                                   
+
                                     <div>
                                         <span>{item.price}</span>
                                     </div>
@@ -55,7 +67,7 @@ const Checkout = () => {
                             <span className='text-lg'>Total Price </span>
                             <span>Rs - {totalPrice}</span>
                         </div>
-                        
+
 
                     </article>
                 </div>
