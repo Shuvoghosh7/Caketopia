@@ -25,7 +25,7 @@ const ShopCart = ({ cart, setCart,handleChange }) => {
     return (
         <article>
             {
-                storeCart?.map((item) => (
+                cart.map((item) => (
                     <div className="cart_box" key={item.id}>
                         <div className="cart_img">
                             <img src={`http://localhost:5000/api/v1/${item.imageUrl}`} />

@@ -26,7 +26,7 @@ function App() {
 
   const handleClick = (item) => {
     let isPresent = false;
-    storeCartData.forEach((product) => {
+    cart.forEach((product) => {
       if (item._id === product._id)
         isPresent = true;
     })
@@ -60,7 +60,7 @@ function App() {
   return (
     <div>
       <TopNav />
-      <Navbar size={storeCartData.length} />
+      <Navbar size={storeCartData?.length} />
       <Routes>
         <Route path='/' element={<Home />}>
           <Route path='OurFeatures' element={<OurFeatures handleClick={handleClick} />} />

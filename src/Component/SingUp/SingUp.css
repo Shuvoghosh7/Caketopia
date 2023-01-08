@@ -7,5 +7,6 @@
     background: linear-gradient(to bottom right,#ff966d,#fa538d,#89379c);
 }
 .sing-up{
-    padding: 300px;
+    padding: 20px;
+    border-radius: 20px;
 }
