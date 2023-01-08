@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './Checkout.css'
-
+import swal from 'sweetalert';
 
 const Checkout = ({ props }) => {
     const [totalPrice, settotalPrice] = useState(0); 
@@ -36,7 +36,21 @@ const Checkout = ({ props }) => {
             email: data.email,
             phone: data.phone,
         }
-        console.log(orderedProduct)
+        fetch('http://localhost:5000/api/v1/checkout', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orderedProduct)
+        })
+            .then(res => res.json())
+            .then(project => console.log(project))
+        swal({
+            title: "Congrats!",
+            text: "Project Added Successfully!",
+            icon: "success",
+        });
+  
 
     }
 
