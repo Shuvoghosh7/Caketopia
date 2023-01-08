@@ -202,10 +202,7 @@ const Checkout = ({ props }) => {
                         <input className='btn btn-accent text-white w-full' type="submit" value="Place order" />
                     </div>
                 </form>
-
             </div>
-
-
         </div>
     );
 };

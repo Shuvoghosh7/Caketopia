@@ -1,0 +1,11 @@
+.loging-page{
+    font-family: 'Poppins',sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right,#ff966d,#fa538d,#89379c);
+}
+.sing-up{
+    padding: 300px;
+}
