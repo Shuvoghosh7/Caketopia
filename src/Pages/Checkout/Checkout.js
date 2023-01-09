@@ -4,7 +4,7 @@ import './Checkout.css'
 import swal from 'sweetalert';
 
 const Checkout = ({ props }) => {
-    const [totalPrice, settotalPrice] = useState(0); 
+    const [totalPrice, settotalPrice] = useState(0);
     const { register, handleSubmit } = useForm();
     let getCart = localStorage.getItem("cartss")
     let storeCart = JSON.parse(getCart)
@@ -20,14 +20,14 @@ const Checkout = ({ props }) => {
         handlePrice();
     })
 
-    const productname= storeCart?.map(item =>  `${item.productName} * ${item.quantity}`);
+    const productname = storeCart?.map(item => `${item.productName} * ${item.quantity}`);
 
-    const productImage= storeCart?.map(item =>  `${item.imageUrl}`);
-   
+    const productImage = storeCart?.map(item => `${item.imageUrl}`);
+
     const onSubmit = async (data) => {
         const orderedProduct = {
-            productImage:productImage,
-            productname:productname,
+            productImage: productImage,
+            productname: productname,
             totalPrice: totalPrice,
             country: data.country,
             firstName: data.firstName,
@@ -36,7 +36,7 @@ const Checkout = ({ props }) => {
             email: data.email,
             phone: data.phone,
         }
-        fetch('http://localhost:5000/api/v1/checkout', {
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/checkout', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,7 @@ const Checkout = ({ props }) => {
             text: "Project Added Successfully!",
             icon: "success",
         });
-  
+
 
     }
 
@@ -67,7 +67,7 @@ const Checkout = ({ props }) => {
                             storeCart?.map((item) => (
                                 <div className="cart_box" key={item.id}>
                                     <div className="cart_img">
-                                        <img src={`http://localhost:5000/api/v1/${item.imageUrl}`} />
+                                        <img src={`https://caketopia-server-production.up.railway.app/api/v1/${item.imageUrl}`} />
                                         <p>{item.productName} * {item.quantity} </p>
 
                                     </div>

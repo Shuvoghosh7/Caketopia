@@ -18,7 +18,7 @@ const Addproduct = () => {
         setFile(e.target.files[0])
         console.log(e.target.files[0])
     }
-    
+
 
     const addUserData = async (e) => {
         e.preventDefault();
@@ -28,25 +28,25 @@ const Addproduct = () => {
         /* formData.append("description", e.target.description.value);
         formData.append("category", e.target.category.value);
         formData.append("price", e.target.category.price);  */
-        
+
         const config = {
             headers: {
-              "Content-Type": "multipart/form-data"
+                "Content-Type": "multipart/form-data"
             }
-          }
-      
-          const res = await axios.post("http://localhost:5000/api/v1/product", formData, config);
-      
-          if (res.data.status === 401 || !res.data) {
-            console.log("errror")
-          } else {
-            // history("/")
-          }
+        }
 
- 
+        const res = await axios.post("https://caketopia-server-production.up.railway.app/api/v1/product", formData, config);
+
+        if (res.data.status === 401 || !res.data) {
+            console.log("errror")
+        } else {
+            // history("/")
+        }
+
+
     }
 
-   
+
 
 
 
@@ -109,7 +109,7 @@ const Addproduct = () => {
                 </div> */}
 
                 <div className="modal-action w-full mx-auto m-5">
-                    <input className='btn btn-accent text-white w-full' type="submit" value="Add Product" onClick={addUserData}/>
+                    <input className='btn btn-accent text-white w-full' type="submit" value="Add Product" onClick={addUserData} />
                 </div>
             </form>
 

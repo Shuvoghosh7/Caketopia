@@ -61,7 +61,7 @@ const Navbar = ({ size }) => {
                 </li> */}
                 <li className="nav__item">
                     <Link to='/shopCart' className="nav__link flex">
-                        <FiShoppingBag className="text-2xl" /> <sup>{size}</sup>
+                        <FiShoppingBag className="text-2xl" /> <sup>{size? size:0}</sup>
 
                     </Link>
                 </li>

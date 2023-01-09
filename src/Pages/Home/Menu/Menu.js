@@ -14,7 +14,7 @@ const Menu = () => {
                     <img src={Pastry} alt="" />
                 </div>
                 <p className="menu-name">
-                    <Link to="/dashboard" className="menu-link">Pastry</Link>
+                    <Link to="/dashboard/allproduct" className="menu-link">Pastry</Link>
                     <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
                 </p>
             </div>

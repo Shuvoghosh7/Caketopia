@@ -7,8 +7,8 @@ const SingUp = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-     
-        fetch('http://localhost:5000/api/v1/user/signup', {
+
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/signup', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -22,7 +22,7 @@ const SingUp = () => {
             text: " Successfully Sing UP!",
             icon: "success",
         });
-  
+
 
     }
     return (

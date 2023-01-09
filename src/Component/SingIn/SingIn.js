@@ -9,7 +9,7 @@ const SingIn = () => {
 
     const onSubmit = async (data) => {
 
-        fetch('http://localhost:5000/api/v1/user/login', {
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -21,7 +21,7 @@ const SingIn = () => {
                 console.log(project.data.token)
                 localStorage.setItem("token", JSON.stringify(project.data.token))
             })
-            
+
         swal({
             title: "Congrats!",
             text: " Successfully Sing UP!",

@@ -4,7 +4,7 @@ import AllProductCard from './AllProductCard';
 
 const AllProduct = ({ handleClick }) => {
     const { isLoading, error, data: products } = useQuery('products', () =>
-        fetch('http://localhost:5000/api/v1/product').then(res =>
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/product').then(res =>
             res.json()
         )
     )
