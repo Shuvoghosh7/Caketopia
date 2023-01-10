@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-
-import swal from 'sweetalert';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const SingIn = () => {
     const { register, handleSubmit } = useForm();
+
+    const jsonToken = localStorage.getItem('token')
+    const tokenParse = JSON.parse(jsonToken)
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    useEffect(() => {
+        if (tokenParse) {
+            navigate(from, { replace: true });
+        }
+    }, [tokenParse, from, navigate])
 
     const onSubmit = async (data) => {
 
@@ -18,17 +27,10 @@ const SingIn = () => {
         })
             .then(res => res.json())
             .then(project => {
-                console.log(project.data.token)
                 localStorage.setItem("token", JSON.stringify(project.data.token))
+                window.location.reload(true) 
             })
-
-        swal({
-            title: "Congrats!",
-            text: " Successfully Sing UP!",
-            icon: "success",
-        });
-
-
+            
     }
     return (
         <div className='loging-page'>
@@ -68,7 +70,7 @@ const SingIn = () => {
                         />
                     </div>
                     <div className="modal-action w-full mx-auto m-5">
-                        <input className='btn  text-white w-full' type="submit" value="SING UP" />
+                        <input className='btn  text-white w-full' type="submit" value="SING UP"/>
                     </div>
                 </form>
             </div>

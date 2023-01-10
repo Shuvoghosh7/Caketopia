@@ -17,6 +17,7 @@ import AddBlogs from './Pages/Dashboard/AddBlogs/AddBlogs';
 import SingIn from './Component/SingIn/SingIn';
 import SingUp from './Component/SingUp/SingUp';
 import Checkout from './Pages/Checkout/Checkout';
+import RequireAuth from './Component/RequireAuth/RequireAuth';
 
 function App() {
   let getCartData = localStorage.getItem("cartss")
@@ -65,24 +66,28 @@ function App() {
         <Route path='/' element={<Home />}>
           <Route path='OurFeatures' element={<OurFeatures handleClick={handleClick} />} />
           <Route path='bestSellers' element={<BestSellers />} />
-          <Route path='newItems' element={<NewItems handleClick={handleClick}/>} />
+          <Route path='newItems' element={<NewItems handleClick={handleClick} />} />
         </Route>
 
         <Route path='/shopCart' element={<ShopCart cart={cart} setCart={setCart} handleChange={handleChange} />} />
 
-        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/blogs' element={
+          <RequireAuth>
+            <Blogs />
+          </RequireAuth>
+        } />
         <Route path='/singin' element={<SingIn />} />
         <Route path='/singup' element={<SingUp />} />
 
-        <Route path='/dashboard' element={<Dashboard/>}>
-          <Route path='addProduct' element={<Addproduct/>}/>
-          <Route path='allproduct' element={<AllProduct handleClick={handleClick} />}/>
-          <Route path='addBlogs' element={<AddBlogs/>}/>
+        <Route path='/dashboard' element={<Dashboard />}>
+          <Route path='addProduct' element={<Addproduct />} />
+          <Route path='allproduct' element={<AllProduct handleClick={handleClick} />} />
+          <Route path='addBlogs' element={<AddBlogs />} />
         </Route>
-        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
 
-      
+
 
 
       <Footer />

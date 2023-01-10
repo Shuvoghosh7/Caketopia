@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import "./Navbar.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from '../../Assets/logo.png'
 import { GiSelfLove } from 'react-icons/gi';
 import { FiShoppingBag } from 'react-icons/fi';
 
 const Navbar = ({ size }) => {
+    const [user, setUser] = useState([]);
+    console.log(user)
+    const jsonToken = localStorage.getItem('token')
+    const tokenParse = JSON.parse(jsonToken)
     const [active, setActive] = useState("nav__menu");
     const [icon, setIcon] = useState("nav__toggler");
     const { pathname } = useLocation()
+
     const navToggle = () => {
         if (active === "nav__menu") {
             setActive("nav__menu nav__active");
@@ -19,6 +24,20 @@ const Navbar = ({ size }) => {
             setIcon("nav__toggler toggle");
         } else setIcon("nav__toggler");
     };
+    useEffect(() => {
+        fetch('http://localhost:5000/api/v1/user/me', {
+            method: "GET",
+            headers: {
+                'authorization': `Bearer ${tokenParse}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => setUser(data.data))
+    }, [])
+    const logout=()=>{
+        localStorage.clear()
+        window.location.reload(true) 
+    }
     return (
         <nav className="nav">
             {pathname.includes('dashboard') && <label for="my-drawer-2" class="btn btn-ghost btn-circle drawer-button lg:hidden">
@@ -49,19 +68,30 @@ const Navbar = ({ size }) => {
                     <Link to='/dashboard' className="nav__link">Dashboard</Link>
                 </li>
                 <li className="nav__item">
-                    <Link to='/singin' className="nav__link">sing in </Link>
+                    {
+                        user ? (
+                            <>
+                                <button onClick={logout} className="nav__link">Logout</button>
+                            </>
+                        ) : (
+                            <>
+                                <Link to='/singin' className="nav__link">sing in </Link>
+
+                            </>
+                        )
+                    }
                 </li>
                 <li className="nav__item">
                     <Link to='/singup' className="nav__link">sing up </Link>
                 </li>
-               {/*  <li className="nav__item">
+                {/*  <li className="nav__item">
                     <Link to='/wishlist' className="nav__link">
                         <GiSelfLove className="text-2xl" />
                     </Link>
                 </li> */}
                 <li className="nav__item">
                     <Link to='/shopCart' className="nav__link flex">
-                        <FiShoppingBag className="text-2xl" /> <sup>{size? size:0}</sup>
+                        <FiShoppingBag className="text-2xl" /> <sup>{size ? size : 0}</sup>
 
                     </Link>
                 </li>
