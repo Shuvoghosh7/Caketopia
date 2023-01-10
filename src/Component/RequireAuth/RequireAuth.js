@@ -9,7 +9,7 @@ const RequireAuth = ({ children }) => {
     const tokenParse = JSON.parse(jsonToken)
     let location = useLocation();
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/user/me', {
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/me', {
             method: "GET",
             headers: {
                 'authorization': `Bearer ${tokenParse}`

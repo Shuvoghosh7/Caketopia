@@ -54,7 +54,7 @@ const Addproduct = () => {
         formData.append("quantity", quantity);
         formData.append("price", price);
 
-        axios.post('http://localhost:5000/api/v1/product', formData, {
+        axios.post('https://caketopia-server-production.up.railway.app/api/v1/product', formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },

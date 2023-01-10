@@ -12,7 +12,7 @@ const Blogs = () => {
     }, [])
     return (
         <div className='mt-20 mb-10 lg:mx-10'>
-            <Fade left cascade>
+            <Fade top cascade>
                 <h1 className='blog-title'>Latest Blog</h1>
             </Fade>
             <div className='grid lg:grid-cols-3 gap-10 mx-12 mt-10'>
