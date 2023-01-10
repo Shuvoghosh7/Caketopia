@@ -5,11 +5,12 @@ import { BsEyeSlashFill } from 'react-icons/bs';
 
 const FeaturesCard = ({ Feature, handleClick }) => {
     const { imageUrl, productName, description, price } = Feature
+    console.log(Feature)
 
     return (
         <div className='Features-card'>
             <div className='Features-img'>
-                <img src={`https://caketopia-server-production.up.railway.app/api/v1/${imageUrl}`} alt="" />
+                <img src={`http://localhost:5000/api/v1/${imageUrl}`} alt="" />
             </div>
             <p className='text-center details-btn'>
                 <button className='mt-1' onClick={() => handleClick(Feature)}>

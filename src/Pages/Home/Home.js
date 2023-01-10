@@ -14,6 +14,7 @@ import Blogs from '../Blogs/Blogs';
 const Home = () => {
     return (
         <div>
+            
             <Banner />
             <Menu />
             <div>
