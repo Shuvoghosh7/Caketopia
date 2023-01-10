@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import blog1 from '../../Assets/Blogs/blog1.png'
 import author from '../../Assets/Blogs/meta-img1.png'
-
 import { FaArrowRight } from 'react-icons/fa';
-
+import Fade from 'react-reveal/Fade';
 const BlogsCard = ({ blog }) => {
     const { name } = blog;
     return (
+        <Fade bottom>
         <div className='blog-card'>
             <div className='blog-img'>
                 <img src={blog1} alt="" />
@@ -25,6 +25,7 @@ const BlogsCard = ({ blog }) => {
                 </div>
             </div>
         </div>
+        </Fade>
     );
 };
 

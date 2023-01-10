@@ -1,8 +1,10 @@
 import React from 'react';
 import './Mbanner.css'
+import Fade from 'react-reveal/Fade';
 const Mbanner = () => {
     return (
-        <div className='grid lg:grid-cols-3 my-12 mx-5 gap-10'>
+        <Fade bottom>
+        <div className='grid lg:grid-cols-3 my-20 mx-5 gap-10'>
             <div className='banner-1'>
                 <div className='mbanner-contant'>
                     <p className='offer-price'><span className='offer-per'>70% </span> Sale Off</p>
@@ -25,6 +27,7 @@ const Mbanner = () => {
                 </div>
             </div>
         </div>
+        </Fade>
     );
 };
 
