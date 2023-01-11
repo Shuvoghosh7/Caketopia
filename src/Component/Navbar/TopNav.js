@@ -5,9 +5,9 @@ const TopNav = () => {
         <div className='top-banner'>
             <p>World Wide Completely Free Returns and Free Shipping</p>
             <div className='top-contact'>
-                <p>+00 123 456 789 <span className='ml-3 mr-3 space-bar'>|</span></p>
-                <p>demo@example.com <span className='ml-3 mr-3 space-bar'>|</span></p>
-                <p>Account</p>
+                <p>+0177 2385111 <span className='ml-3 mr-3 space-bar'>|</span></p>
+                <p>caketopia@example.com <span className='ml-3 mr-3 space-bar'>|</span></p>
+                <p>Caketopia</p>
             </div>
         </div>
     );

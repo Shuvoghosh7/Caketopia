@@ -7,7 +7,6 @@ import { FiShoppingBag } from 'react-icons/fi';
 
 const Navbar = ({ size }) => {
     const [user, setUser] = useState([]);
-    console.log(user)
     const jsonToken = localStorage.getItem('token')
     const tokenParse = JSON.parse(jsonToken)
     const [active, setActive] = useState("nav__menu");
@@ -56,7 +55,7 @@ const Navbar = ({ size }) => {
                     <Link to='/about' className="nav__link">About</Link>
                 </li>
                 <li className="nav__item">
-                    <Link to='/dashboard' className="nav__link">Shop</Link>
+                    <Link to='/dashboard/allproduct' className="nav__link">Shop</Link>
                 </li>
                 <li className="nav__item">
                     <Link to='/blogs' className="nav__link">Blog</Link>

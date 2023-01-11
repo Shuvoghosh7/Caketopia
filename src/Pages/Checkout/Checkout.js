@@ -6,11 +6,11 @@ import swal from 'sweetalert';
 const Checkout = ({ props }) => {
     const [totalPrice, settotalPrice] = useState(0);
     const { register, handleSubmit } = useForm();
-    let getCart = localStorage.getItem("cartss")
+    let getCart = localStorage.getItem("products")
     let storeCart = JSON.parse(getCart)
     const handlePrice = () => {
         let ans = 0;
-        storeCart.map((item) => (
+        storeCart?.map((item) => (
             ans += item.quantity * item.price
         ))
         settotalPrice(ans);
@@ -50,7 +50,9 @@ const Checkout = ({ props }) => {
             text: "Project Added Successfully!",
             icon: "success",
         });
-
+        localStorage.removeItem('products');
+        window.location.reload(true)
+       
 
     }
 
@@ -79,7 +81,7 @@ const Checkout = ({ props }) => {
                             ))}
                         <div className='total-price'>
                             <span className='text-lg'>Total Price </span>
-                            <span>Rs - {totalPrice}</span>
+                            <span>{totalPrice} $</span>
                         </div>
 
 

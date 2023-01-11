@@ -21,14 +21,14 @@ import RequireAuth from './Component/RequireAuth/RequireAuth';
 import About from './About/About';
 
 function App() {
-  let getCartData = localStorage.getItem("cartss")
+  let getCartData = localStorage.getItem("products")
   let storeCartData = JSON.parse(getCartData)
   const [cart, setCart] = useState([]);
   const [warning, setWarning] = useState(false);
 
   const handleClick = (item) => {
     let isPresent = false;
-    cart.forEach((product) => {
+    cart?.forEach((product) => {
       if (item._id === product._id)
         isPresent = true;
     })
@@ -41,7 +41,7 @@ function App() {
     }
     setCart([...cart, item]);
     const cartItem = [...cart, item];
-    localStorage.setItem("cartss", JSON.stringify(cartItem))
+    localStorage.setItem("products", JSON.stringify(cartItem))
   }
 
   const handleChange = (item, d) => {
@@ -56,8 +56,8 @@ function App() {
     if (tempArr[ind].quantity === 0)
       tempArr[ind].quantity = 1;
     setCart([...tempArr])
-    let dd = [...tempArr]
-    localStorage.setItem("cartss", JSON.stringify(dd))
+    let shopItem = [...tempArr]
+    localStorage.setItem("products", JSON.stringify(shopItem))
   }
   return (
     <div>

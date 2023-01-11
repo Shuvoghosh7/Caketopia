@@ -4,12 +4,12 @@ import './ShopCart.css'
 const ShopCart = ({ cart, setCart, handleChange }) => {
 
     const [price, setPrice] = useState(0);
-    let getCart = localStorage.getItem("cartss")
+    let getCart = localStorage.getItem("products")
     let storeCart = JSON.parse(getCart)
 
     const handlePrice = () => {
         let ans = 0;
-        storeCart.map((item) => (
+        storeCart?.map((item) => (
             ans += item.quantity * item.price
         ))
         setPrice(ans);
@@ -17,7 +17,7 @@ const ShopCart = ({ cart, setCart, handleChange }) => {
     const handleRemove = (id) => {
         const arr = storeCart.filter((item) => item._id !== id);
         setCart(arr);
-        localStorage.setItem("cartss", JSON.stringify(arr))
+        localStorage.setItem("products", JSON.stringify(arr))
     }
     useEffect(() => {
         handlePrice();
@@ -25,7 +25,7 @@ const ShopCart = ({ cart, setCart, handleChange }) => {
     return (
         <article>
             {
-                storeCart.map((item) => (
+                storeCart?.map((item) => (
                     <div className="cart_box" key={item.id}>
                         <div className="cart_img">
                             <img src={`https://caketopia-server-production.up.railway.app/api/v1/${item.imageUrl}`} />
@@ -44,9 +44,9 @@ const ShopCart = ({ cart, setCart, handleChange }) => {
                 ))}
             <div className='total'>
                 <span>Total Price </span>
-                <span>Rs - {price}</span>
+                <span>{price}$</span>
             </div>
-            <div className='text-center mt-10 mb-20'>
+            <div className='text-center mt-10 mb-20 flex justify-end'>
                 <Link to='/checkout' className='text-2xl Checkout-btn'>Checkout</Link>
             </div>
 

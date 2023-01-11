@@ -1,7 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 article{
     width: 60%;
     margin: auto;
@@ -39,7 +36,7 @@ article{
     border:none;
     outline: none;
     color: white;
-    background-color: skyblue;
+    background-color: #f55050;
     border-radius: 5px;
     cursor: pointer;
 }

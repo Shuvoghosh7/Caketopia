@@ -16,7 +16,7 @@ const Menu = () => {
                     </div>
                     <p className="menu-name">
                         <Link to="/dashboard/allproduct" className="menu-link">Pastry</Link>
-                        <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
+                        {/* <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p> */}
                     </p>
                 </div>
                 <div className="menu1">
@@ -24,8 +24,8 @@ const Menu = () => {
                         <img src={Breakfast} alt="" />
                     </div>
                     <p className="menu-name">
-                        <Link to="/dashboard" className="menu-link">Breakfast</Link>
-                        <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
+                        <Link to="/dashboard/allproduct" className="menu-link">Breakfast</Link>
+                        {/* <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p> */}
                     </p>
                 </div>
                 <div className="menu1">
@@ -33,8 +33,8 @@ const Menu = () => {
                         <img src={Cake} alt="" />
                     </div>
                     <p className="menu-name">
-                        <Link to="/dashboard" className="menu-link">Cake</Link>
-                        <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p>
+                        <Link to="/dashboard/allproduct" className="menu-link">Cake</Link>
+                        {/* <p className="arro-icon"><HiOutlineArrowNarrowRight className="mr-5" /> <span>(44)</span></p> */}
                     </p>
                 </div>
             </div>

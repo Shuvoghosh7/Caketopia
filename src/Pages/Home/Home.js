@@ -19,9 +19,10 @@ const Home = () => {
             <Menu />
             <div>
                 <Fade bottom>
-                    <div>
+                    <div >
                         <Fade bottom cascade>
                             <h1 className='product-title'>New Products</h1>
+                            <p className='product-about my-5'>Caketopia is a Cake & Pastry online based shop.<br/> It is an International Standard high quality and real food and pastry shop.</p>
                         </Fade>
 
                         <div className='text-center'>

@@ -1,0 +1,13 @@
+.about-section{
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    line-height: 1.7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px 20px;
+    text-align: justify;
+}
+.about-section h5{
+    font-size: 25px;
+    text-align: center;
+    color: #fc7c7c;
+}
