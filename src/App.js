@@ -18,6 +18,7 @@ import SingIn from './Component/SingIn/SingIn';
 import SingUp from './Component/SingUp/SingUp';
 import Checkout from './Pages/Checkout/Checkout';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
+import About from './About/About';
 
 function App() {
   let getCartData = localStorage.getItem("cartss")
@@ -85,6 +86,8 @@ function App() {
           <Route path='addBlogs' element={<AddBlogs />} />
         </Route>
         <Route path='/checkout' element={<Checkout />} />
+        <Route path='/about' element={<About />} />
+
       </Routes>
 
 
