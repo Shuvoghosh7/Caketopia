@@ -19,6 +19,7 @@ import SingUp from './Component/SingUp/SingUp';
 import Checkout from './Pages/Checkout/Checkout';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import About from './About/About';
+import ProoductDetails from './Pages/Products/OurFeatures/ProoductDetails';
 
 function App() {
   let getCartData = localStorage.getItem("products")
@@ -87,6 +88,7 @@ function App() {
         </Route>
         <Route path='/checkout' element={<Checkout />} />
         <Route path='/about' element={<About />} />
+        <Route path='/productDetails/:productId' element={<ProoductDetails handleClick={handleClick}/>} />
 
       </Routes>
 

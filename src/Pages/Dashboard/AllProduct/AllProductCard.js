@@ -1,9 +1,10 @@
 import React from 'react';
 import { FiShoppingBag } from 'react-icons/fi';
 import { BsEyeSlashFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const AllProductCard = ({ Feature, handleClick }) => {
-    const { imageUrl, productName, description, price } = Feature
+    const { imageUrl, productName, description, price, _id } = Feature
     return (
         <div className='Features-card mx-5 my-3'>
             <div className='Features-img'>
@@ -14,17 +15,9 @@ const AllProductCard = ({ Feature, handleClick }) => {
                     <FiShoppingBag className='text-2xl shop-icon' />
                 </button>
                 <button>
-                    <label for="my-modal-3" >
+                    <Link to={`/productDetails/${_id}`}>
                         <BsEyeSlashFill className='text-2xl shop-icon ml-3' />
-                    </label>
-                    <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-                    <div class="modal">
-                        <div class="modal-box relative">
-                            <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                            <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-
-                        </div>
-                    </div>
+                    </Link>
 
                 </button>
 

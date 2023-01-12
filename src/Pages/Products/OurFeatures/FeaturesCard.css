@@ -35,4 +35,17 @@
 .shop-icon:hover{
    color: #FC7C7C; 
 }
+.details-page{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px 0px;
+}
 
+.details-image img{
+    width: 250px;
+}
+.add-to-cart{
+    background: #282828;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 10px;
+}

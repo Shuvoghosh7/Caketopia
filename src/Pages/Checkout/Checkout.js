@@ -51,7 +51,10 @@ const Checkout = ({ props }) => {
             icon: "success",
         });
         localStorage.removeItem('products');
-        window.location.reload(true)
+        setTimeout(() => {
+            window.location.reload(true)
+          }, 3000);
+        
        
 
     }
