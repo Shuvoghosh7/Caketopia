@@ -69,8 +69,8 @@ const Addproduct = () => {
             })
     }
     return (
-        <div className='mx-96'>
-            <form className="bg-base-100 mx-auto p-5">
+        <div className='loging-page'>
+            <form className="bg-[#FFC6D3] mx-auto p-5 modal-box">
                 <div className="form-control w-full mx-auto">
                     <label className="label">
                         <span className="label-text text-lg font-bold">Product Image</span>

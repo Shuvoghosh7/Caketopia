@@ -6,9 +6,9 @@ import Fade from 'react-reveal/Fade';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/comments')
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/blogs')
             .then(res => res.json())
-            .then(data => setBlogs(data))
+            .then(data => setBlogs(data.data))
     }, [])
     return (
         <div className='mt-20 mb-10 lg:mx-10'>
@@ -17,7 +17,7 @@ const Blogs = () => {
             </Fade>
             <div className='grid lg:grid-cols-3 gap-10 mx-12 mt-10'>
                 {
-                    blogs.slice(0, 3).map(blog => <BlogsCard
+                    blogs?.map(blog => <BlogsCard
                         key={blog.id}
                         blog={blog}
                     />)

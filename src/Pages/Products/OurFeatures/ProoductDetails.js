@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { FiShoppingBag } from 'react-icons/fi';
+import SocileShare from '../../../Component/SocileShare/SocileShare';
 const ProoductDetails = ({ handleClick }) => {
     const { productId } = useParams()
 
@@ -14,7 +15,7 @@ const ProoductDetails = ({ handleClick }) => {
         return <p>loding....</p>
     }
 
-    console.log(SingleProduct)
+ 
     return (
         <div className='lg:flex md:flex justify-around items-center my-5 lg:mx-20 mx-5 details-page'>
             <div className='details-image'>
@@ -29,6 +30,8 @@ const ProoductDetails = ({ handleClick }) => {
                        ADD TO CART
                     </button>
                 </p>
+
+               
 
 
 

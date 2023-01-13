@@ -20,6 +20,7 @@ import Checkout from './Pages/Checkout/Checkout';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import About from './About/About';
 import ProoductDetails from './Pages/Products/OurFeatures/ProoductDetails';
+import BlogsDetails from './Pages/Blogs/BlogsDetails';
 
 function App() {
   let getCartData = localStorage.getItem("products")
@@ -73,11 +74,9 @@ function App() {
 
         <Route path='/shopCart' element={<ShopCart cart={cart} setCart={setCart} handleChange={handleChange} />} />
 
-        <Route path='/blogs' element={
-          <RequireAuth>
-            <Blogs />
-          </RequireAuth>
-        } />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/blogsDetails/:blogId' element={<BlogsDetails />} />
+
         <Route path='/singin' element={<SingIn />} />
         <Route path='/singup' element={<SingUp />} />
 
