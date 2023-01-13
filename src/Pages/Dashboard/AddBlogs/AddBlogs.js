@@ -64,7 +64,7 @@ const AddBlogs = () => {
             <form className="bg-[#FFC6D3] mx-auto p-5 modal-box">
                 <div className="form-control w-full mx-auto">
                     <label className="label">
-                        <span className="label-text text-lg font-bold">Product Image</span>
+                        <span className="label-text text-lg font-bold">Blog Image</span>
                     </label>
                     <input
                         type="file"
@@ -74,7 +74,7 @@ const AddBlogs = () => {
                 </div>
                 <div className="form-control w-full mx-auto">
                     <label className="label">
-                        <span className="label-text text-lg font-bold">Product Name</span>
+                        <span className="label-text text-lg font-bold">Blog Title</span>
                     </label>
                     <input
                         type="text"
@@ -86,7 +86,7 @@ const AddBlogs = () => {
 
                 <div className="form-control w-full mx-auto">
                     <label className="label">
-                        <span className="label-text text-lg font-bold">Product Description</span>
+                        <span className="label-text text-lg font-bold">Blog Description</span>
                     </label>
                     <textarea
                         placeholder="Product Description"
