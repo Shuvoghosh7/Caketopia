@@ -1,12 +1,12 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
 const AddBlogs = () => {
     const [blogtitle, setBlogtitle] = useState("");
     const [description, setDescription] = useState("");
+    const [authorname, setAuthorname] = useState("");
     const [blogDate, setBlogDate] = useState("");
     const [file, setFile] = useState("");
-
 
     const blogName = (e) => {
         const { value } = e.target;
@@ -16,6 +16,12 @@ const AddBlogs = () => {
     const blogDescription = (e) => {
         const { value } = e.target;
         setDescription(value);
+        console.log(value)
+    }
+ 
+    const nameOfAuthor = (e) => {
+        const { value } = e.target;
+        setAuthorname(value);
         console.log(value)
     }
     const productPostDate = (e) => {
@@ -37,9 +43,10 @@ const AddBlogs = () => {
         formData.set("image", file);
         formData.set("blogTitle", blogtitle);
         formData.append("description", description);
+        formData.append("authorName", authorname);
         formData.append("blogDate", blogDate);
 
-        axios.post('https://caketopia-server-production.up.railway.app/api/v1/blogs', formData, {
+        axios.post('http://localhost:5000/api/v1/blogs', formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
@@ -92,6 +99,17 @@ const AddBlogs = () => {
                         placeholder="Product Description"
                         className="input input-bordered bg-white w-full"
                         name='description' onChange={blogDescription}
+                    />
+                </div>
+                <div className="form-control w-full mx-auto">
+                    <label className="label">
+                        <span className="label-text text-lg font-bold">Author Name</span>
+                    </label>
+                    <input
+                        type="text"
+                        className="input input-bordered bg-white w-full"
+                        name='authorName'
+                        onChange={nameOfAuthor}
                     />
                 </div>
                 <div className="form-control w-full mx-auto">

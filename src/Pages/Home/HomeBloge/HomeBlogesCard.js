@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 const HomeBlogesCard = ({ blog }) => {
-    const { blogTitle, imageUrl, blogDate, _id } = blog;
+    const { blogTitle, imageUrl, blogDate, _id, authorName } = blog;
     return (
         <div>
             <Fade bottom>
@@ -18,11 +18,10 @@ const HomeBlogesCard = ({ blog }) => {
                     </Link>
                     <div className='ml-7'>
                         <p className='blog-span'>Brakery</p>
-                        <p className='blog-name mb-5'>{blogTitle.substr(0,50)}</p>
-                        <div className='author-details'>
-                            <img src={author} alt="" className='mb-3'/>
-                            <p className='ml-5'>BY:Admin</p>
-                            <h1 className='ml-10'>{blogDate}</h1>
+                        <p className='blog-name mb-5'>{blogTitle.substr(0, 50)}</p>
+                        <div className='author-details '>
+                            <p className='mb-3'>Author:{authorName}</p>
+                            <h1>{blogDate}</h1>
                         </div>
                     </div>
                 </div>

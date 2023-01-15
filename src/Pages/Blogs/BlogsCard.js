@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import blog1 from '../../Assets/Blogs/blog1.png'
 import author from '../../Assets/Blogs/meta-img1.png'
 import { FaArrowRight } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 const BlogsCard = ({ blog }) => {
-    const { blogTitle, imageUrl, blogDate
+    const { blogTitle, imageUrl, blogDate,authorName
         , _id } = blog;
+
+    const [auth, setAuth] = useState([]);
+    console.log(auth)
+    const jsonToken = localStorage.getItem('token')
+    const tokenParse = JSON.parse(jsonToken)
+    useEffect(() => {
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/me', {
+            method: "GET",
+            headers: {
+                'authorization': `Bearer ${tokenParse}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => setAuth(data.data))
+    }, [])
     return (
         <Fade bottom>
             <div className='blog-card'>
@@ -20,9 +35,8 @@ const BlogsCard = ({ blog }) => {
                     <p className='blog-span'>Brakery</p>
                     <p className='blog-name mb-5'>{blogTitle.substr(0,50)}</p>
                     <div className='author-details'>
-                        <img src={author} alt="" />
-                        <p className='ml-5'>BY:Admin</p>
-                        <h1 className='ml-10'>{blogDate}</h1>
+                        <p>Author:{authorName}</p>
+                        <h1>{blogDate}</h1>
                     </div>
                 </div>
             </div>

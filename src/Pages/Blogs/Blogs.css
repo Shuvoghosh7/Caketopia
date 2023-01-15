@@ -56,6 +56,7 @@
     box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
     display: inline-block;
     cursor: pointer;
+    
 }
 .blog-details:hover{
     background-color: #fc7c7c;
@@ -63,8 +64,12 @@
 }
 .author-details{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     margin-bottom: 15px;
+}
+.author-details img{
+    width: 30px;
+    border-radius: 30px;
 }
 .author-details p, h1{
     font-size: 16px;

@@ -82,6 +82,22 @@ const SingUp = () => {
                             })}
                         />
                     </div>
+                    <div className="form-control w-full mx-auto">
+                        <label className="label">
+                            <span className="label-text">Image URL</span>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Your image url"
+                            className="input input-bordered bg-white  w-full "
+                            {...register("imageUrl", {
+                                required: {
+                                    value: true,
+                                    message: "name is required"
+                                }
+                            })}
+                        />
+                    </div>
 
 
                     <div className='flex'>
