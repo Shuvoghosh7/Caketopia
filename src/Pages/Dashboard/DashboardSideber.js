@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { GrProductHunt } from 'react-icons/gr';
 import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { ImBlogger2 } from 'react-icons/im';
 const DashboardSideber = ({ children }) => {
     const [auth, setAuth] = useState([]);
-    let role = 'Admin';
+
     console.log(auth?.role)
     const jsonToken = localStorage.getItem('token')
     const tokenParse = JSON.parse(jsonToken)
@@ -34,12 +34,22 @@ const DashboardSideber = ({ children }) => {
                     <li>
                         <Link className='bg-transparent text-lg font-medium' to="/dashboard/allproduct"><GrProductHunt />All Product</Link>
                     </li>
-                    <li>
-                        <Link className='bg-transparent text-lg font-medium' to="/dashboard/addProduct"><MdOutlineProductionQuantityLimits />Add Product</Link>
-                    </li>
-                    <li>
-                        <Link className='bg-transparent text-lg font-medium' to="/dashboard/addBlogs"><ImBlogger2 />Add Blogs</Link>
-                    </li>
+
+                    {
+                        auth?.role === "Admin" ?
+                            <>
+
+                                <li>
+                                    <Link className='bg-transparent text-lg font-medium' to="/dashboard/addProduct"><MdOutlineProductionQuantityLimits />Add Product</Link>
+                                </li>
+                                <li>
+                                    <Link className='bg-transparent text-lg font-medium' to="/dashboard/addBlogs"><ImBlogger2 />Add Blogs</Link>
+                                </li>
+                            </>
+
+                            : null
+                    }
+
                 </ul>
             </div>
         </div>

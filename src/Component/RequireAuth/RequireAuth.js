@@ -8,7 +8,7 @@ const RequireAuth = ({ children }) => {
     let location = useLocation();
 
     const { isLoading, error, data: auth } = useQuery('auth', () =>
-        fetch('http://localhost:5000/api/v1/user/me',{
+        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/me',{
             method: "GET",
             headers: {
                 'authorization': `Bearer ${tokenParse}`
