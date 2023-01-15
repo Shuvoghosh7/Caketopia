@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import './Blogs.css'
-import BlogsCard from './BlogsCard';
-import Fade from 'react-reveal/Fade';
+import React from 'react';
+import { Bars } from 'react-loader-spinner';
 import { useQuery } from 'react-query';
-import { Bars } from 'react-loader-spinner'
+import Fade from 'react-reveal/Fade';
 
-const Blogs = () => {
+import HomeBlogesCard from './HomeBlogesCard';
+
+const HomeBloges = () => {
     const { isLoading, error, data: blogs } = useQuery('blogs', () =>
         fetch('https://caketopia-server-production.up.railway.app/api/v1/blogs').then(res =>
             res.json()
@@ -27,11 +27,11 @@ const Blogs = () => {
     return (
         <div className='mt-20 mb-10 lg:mx-10'>
             <Fade top cascade>
-                <h1 className='blog-title'>ALL BLOGS</h1>
+                <h1 className='blog-title'>Latest Blog</h1>
             </Fade>
             <div className='grid lg:grid-cols-3 gap-10 mx-12 mt-10'>
                 {
-                    blogs.data?.map(blog => <BlogsCard
+                    blogs.data?.slice(-3).map(blog => <HomeBlogesCard
                         key={blog.id}
                         blog={blog}
                     />)
@@ -42,4 +42,4 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default HomeBloges;

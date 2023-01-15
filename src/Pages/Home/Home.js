@@ -7,8 +7,8 @@ import Menu from './Menu/Menu';
 import Mbanner from './MBanner/Mbanner';
 import MenuProduct from './MenuProduct/MenuProduct';
 import SpecialOffer from './SpecialOffer/SpecialOffer';
-import Blogs from '../Blogs/Blogs';
 import Fade from 'react-reveal/Fade';
+import HomeBloges from './HomeBloge/HomeBloges';
 
 
 const Home = () => {
@@ -36,7 +36,7 @@ const Home = () => {
                 <Mbanner />
                 <MenuProduct />
                 <SpecialOffer />
-                <Blogs />
+                <HomeBloges/>
             </div>
 
         </div>

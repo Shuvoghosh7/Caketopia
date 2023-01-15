@@ -15,6 +15,7 @@
 .blog-img img{
     width: 100%;
     border-radius: 5px;
+    height: 260px;
     
 }
 .blog-span{
@@ -54,7 +55,6 @@
     -webkit-box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
     box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
     display: inline-block;
-  
     cursor: pointer;
 }
 .blog-details:hover{

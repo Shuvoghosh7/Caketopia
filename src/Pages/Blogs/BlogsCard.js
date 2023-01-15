@@ -18,7 +18,7 @@ const BlogsCard = ({ blog }) => {
                 </Link>
                 <div className='ml-7'>
                     <p className='blog-span'>Brakery</p>
-                    <p className='blog-name mb-5'>{blogTitle}</p>
+                    <p className='blog-name mb-5'>{blogTitle.substr(0,50)}</p>
                     <div className='author-details'>
                         <img src={author} alt="" />
                         <p className='ml-5'>BY:Admin</p>
