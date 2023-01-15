@@ -10,7 +10,7 @@ const NewItems = ({ handleClick }) => {
     )
 
     if (isLoading) {
-        return <div className='flex justify-center'>
+        return <div className='flex justify-center items-center'>
             <Bars
                 height="80"
                 width="80"

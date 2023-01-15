@@ -80,14 +80,23 @@ function App() {
         <Route path='/singin' element={<SingIn />} />
         <Route path='/singup' element={<SingUp />} />
 
-        <Route path='/dashboard' element={<Dashboard />}>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        }>
           <Route path='addProduct' element={<Addproduct />} />
           <Route path='allproduct' element={<AllProduct handleClick={handleClick} />} />
           <Route path='addBlogs' element={<AddBlogs />} />
         </Route>
-        <Route path='/checkout' element={<Checkout />} />
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <Checkout />
+          </RequireAuth>
+
+        } />
         <Route path='/about' element={<About />} />
-        <Route path='/productDetails/:productId' element={<ProoductDetails handleClick={handleClick}/>} />
+        <Route path='/productDetails/:productId' element={<ProoductDetails handleClick={handleClick} />} />
 
       </Routes>
 

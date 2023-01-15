@@ -44,18 +44,21 @@ const Checkout = ({ props }) => {
             body: JSON.stringify(orderedProduct)
         })
             .then(res => res.json())
-            .then(project => console.log(project))
-        swal({
-            title: "Congrats!",
-            text: "Project Added Successfully!",
-            icon: "success",
-        });
+            .then(project => {
+                console.log(project)
+                swal({
+                    title: "Congrats!",
+                    text: "Project Added Successfully!",
+                    icon: "success",
+                });
+            })
+
         localStorage.removeItem('products');
         setTimeout(() => {
             window.location.reload(true)
-          }, 3000);
-        
-       
+        }, 3000);
+
+
 
     }
 
