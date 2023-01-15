@@ -19,11 +19,12 @@ const DashboardSideber = ({ children }) => {
                     <h1 className='mb-4 text-center  font-bold text-2xl'>Caketopia</h1>
                     {/*   Sidebar content here */}
                     <li>
-                        <Link className='bg-transparent' to="/dashboard/addProduct"><FaMoneyCheckAlt/>Add Product</Link>
-                    </li>
-                    <li>
                         <Link className='bg-transparent' to="/dashboard/allproduct"><FaMoneyCheckAlt/>All Product</Link>
                     </li>
+                    <li>
+                        <Link className='bg-transparent' to="/dashboard/addProduct"><FaMoneyCheckAlt/>Add Product</Link>
+                    </li>
+                    
                     <li>
                         <Link className='bg-transparent' to="/dashboard/addBlogs"><FaMoneyCheckAlt/>Add Blogs</Link>
                     </li>

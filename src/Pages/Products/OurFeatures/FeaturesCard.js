@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const FeaturesCard = ({ Feature, handleClick }) => {
     const { imageUrl, productName, description, price, _id } = Feature
-    
     return (
         <div className='Features-card'>
             <div className='Features-img'>
@@ -18,14 +17,11 @@ const FeaturesCard = ({ Feature, handleClick }) => {
                 <button className='mt-1' onClick={() => handleClick(Feature)}>
                     <FiShoppingBag className='text-2xl shop-icon' />
                 </button>
-                <button >
+                <button>
                     <Link to={`/productDetails/${_id}`}>
                         <BsEyeSlashFill className='text-2xl shop-icon ml-3' />
                     </Link>
-                    
-                    
                 </button>
-
             </p>
             <p className='text-center product-name'>{productName}</p>
             <p className='text-center product-price'>${price}</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import NewItemsCard from './NewItemsCard';
-
+import { Bars } from 'react-loader-spinner'
 const NewItems = ({ handleClick }) => {
     const { isLoading, error, data: products } = useQuery('products', () =>
         fetch('https://caketopia-server-production.up.railway.app/api/v1/product').then(res =>
@@ -10,12 +10,22 @@ const NewItems = ({ handleClick }) => {
     )
 
     if (isLoading) {
-        return <h1>loading ...</h1>
+        return <div className='flex justify-center'>
+            <Bars
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="bars-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />
+        </div>
     }
     return (
         <div className='grid lg:grid-cols-4 gap-10 mx-12 mt-10'>
             {
-                products?.map(Feature => <NewItemsCard
+                products?.slice(Math.max(products.length - 4)).map(Feature => <NewItemsCard
                     key={Feature.id}
                     Feature={Feature}
                     handleClick={handleClick}

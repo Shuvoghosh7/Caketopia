@@ -64,7 +64,7 @@ const Navbar = ({ size }) => {
                     <Link to='/blog' className="nav__link">Contact</Link>
                 </li>
                 <li className="nav__item">
-                    <Link to='/dashboard' className="nav__link">Dashboard</Link>
+                    <Link to='/dashboard/allproduct' className="nav__link">Dashboard</Link>
                 </li>
                 <li className="nav__item">
                     {
