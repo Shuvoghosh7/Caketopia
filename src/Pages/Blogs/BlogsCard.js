@@ -7,21 +7,6 @@ import Fade from 'react-reveal/Fade';
 const BlogsCard = ({ blog }) => {
     const { blogTitle, imageUrl, blogDate,authorName
         , _id } = blog;
-
-    const [auth, setAuth] = useState([]);
-    console.log(auth)
-    const jsonToken = localStorage.getItem('token')
-    const tokenParse = JSON.parse(jsonToken)
-    useEffect(() => {
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/me', {
-            method: "GET",
-            headers: {
-                'authorization': `Bearer ${tokenParse}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => setAuth(data.data))
-    }, [])
     return (
         <Fade bottom>
             <div className='blog-card'>

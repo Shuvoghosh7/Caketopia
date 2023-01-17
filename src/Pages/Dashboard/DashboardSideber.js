@@ -5,8 +5,6 @@ import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { ImBlogger2 } from 'react-icons/im';
 const DashboardSideber = ({ children }) => {
     const [auth, setAuth] = useState([]);
-
-    console.log(auth?.role)
     const jsonToken = localStorage.getItem('token')
     const tokenParse = JSON.parse(jsonToken)
     useEffect(() => {
@@ -38,7 +36,6 @@ const DashboardSideber = ({ children }) => {
                     {
                         auth?.role === "Admin" ?
                             <>
-
                                 <li>
                                     <Link className='bg-transparent text-lg font-medium' to="/dashboard/addProduct"><MdOutlineProductionQuantityLimits />Add Product</Link>
                                 </li>
@@ -46,10 +43,8 @@ const DashboardSideber = ({ children }) => {
                                     <Link className='bg-transparent text-lg font-medium' to="/dashboard/addBlogs"><ImBlogger2 />Add Blogs</Link>
                                 </li>
                             </>
-
                             : null
                     }
-
                 </ul>
             </div>
         </div>

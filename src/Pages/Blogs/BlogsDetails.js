@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import { Bars } from 'react-loader-spinner'
 const BlogsDetails = () => {
     const { blogId } = useParams()
     const { isLoading, error, data: SingleBlog } = useQuery('SingleBlog', () =>
@@ -9,7 +10,17 @@ const BlogsDetails = () => {
         )
     )
     if (isLoading) {
-        return <p>loding....</p>
+        return <div className='flex justify-center'>
+            <Bars
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="bars-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />
+        </div>
     }
     return (
         <div className='lg:mx-40 md:mx-20 mx-5 my-10'>

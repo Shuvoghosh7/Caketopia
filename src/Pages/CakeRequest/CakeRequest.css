@@ -1,0 +1,15 @@
+.custom-banner{
+    background-image: url(../../Assets/CustomCake/story-banner.jpg);
+    min-height: 190px;
+    width: 100%;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.request-text{
+    text-align: center;
+    font-size: 25px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+}

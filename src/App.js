@@ -21,6 +21,7 @@ import RequireAuth from './Component/RequireAuth/RequireAuth';
 import About from './About/About';
 import ProoductDetails from './Pages/Products/OurFeatures/ProoductDetails';
 import BlogsDetails from './Pages/Blogs/BlogsDetails';
+import CakeRequest from './Pages/CakeRequest/CakeRequest';
 
 function App() {
   let getCartData = localStorage.getItem("products")
@@ -97,7 +98,7 @@ function App() {
         } />
         <Route path='/about' element={<About />} />
         <Route path='/productDetails/:productId' element={<ProoductDetails handleClick={handleClick} />} />
-
+        <Route path='/cake-request' element={<CakeRequest />} />
       </Routes>
 
 

@@ -58,6 +58,9 @@ const Navbar = ({ size }) => {
                     <Link to='/dashboard/allproduct' className="nav__link">Shop</Link>
                 </li>
                 <li className="nav__item">
+                    <Link to='/cake-request' className="nav__link">cake request </Link>
+                </li>
+                <li className="nav__item">
                     <Link to='/blogs' className="nav__link">Blog</Link>
                 </li>
                 <li className="nav__item">

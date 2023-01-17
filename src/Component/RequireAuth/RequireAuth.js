@@ -16,7 +16,6 @@ const RequireAuth = ({ children }) => {
         })
         .then(res =>res.json())
     )
-    console.log(auth)
     if (isLoading) {
         return <div className='flex justify-center items-center'>
             <Bars
