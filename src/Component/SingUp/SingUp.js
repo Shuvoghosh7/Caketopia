@@ -163,7 +163,7 @@ const SingUp = () => {
                     <div className="modal-action w-full mx-auto m-5">
                         <input className='btn  text-white w-full' type="submit" value="SING UP" />
                     </div>
-                    <Link to='/login' className='flex justify-center'>Already Have An Account?</Link>
+                    <Link to='/singin' className='flex justify-center text-blue-700'>Already Have An Account?</Link>
                 </form>
 
             </div>

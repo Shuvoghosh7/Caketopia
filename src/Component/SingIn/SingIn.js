@@ -73,6 +73,7 @@ const SingIn = () => {
                         <input className='btn  text-white w-full' type="submit" value="SING UP"/>
                     </div>
                 </form>
+                <p className='text-center'>Don't Have an Account Yet? <span className='text-blue-700'><Link to='/singup'>Singup</Link></span></p>
             </div>
         </div>
     );

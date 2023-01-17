@@ -62,6 +62,7 @@ function App() {
     let shopItem = [...tempArr]
     localStorage.setItem("products", JSON.stringify(shopItem))
   }
+  
   return (
     <div>
       <TopNav />
@@ -72,7 +73,6 @@ function App() {
           <Route path='bestSellers' element={<BestSellers />} />
           <Route path='newItems' element={<NewItems handleClick={handleClick} />} />
         </Route>
-
         <Route path='/shopCart' element={<ShopCart cart={cart} setCart={setCart} handleChange={handleChange} />} />
 
         <Route path='/blogs' element={<Blogs />} />
@@ -84,8 +84,7 @@ function App() {
         <Route path='/dashboard' element={
           <RequireAuth>
             <Dashboard />
-          </RequireAuth>
-        }>
+          </RequireAuth>}>
           <Route path='addProduct' element={<Addproduct />} />
           <Route path='allproduct' element={<AllProduct handleClick={handleClick} />} />
           <Route path='addBlogs' element={<AddBlogs />} />
@@ -93,16 +92,14 @@ function App() {
         <Route path='/checkout' element={
           <RequireAuth>
             <Checkout />
-          </RequireAuth>
+          </RequireAuth>} />
 
-        } />
         <Route path='/about' element={<About />} />
+
         <Route path='/productDetails/:productId' element={<ProoductDetails handleClick={handleClick} />} />
+
         <Route path='/cake-request' element={<CakeRequest />} />
       </Routes>
-
-
-
 
       <Footer />
       {
