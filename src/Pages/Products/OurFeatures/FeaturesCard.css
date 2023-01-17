@@ -2,25 +2,22 @@
     display: flex;
     justify-content: center;
 
-}
-    
+}   
 .Features-img img{
-
     width: 200px;
+    height: 190px;
     margin-top: 20px;
-
 }
 .Features-card{
     border: 1px solid #6c757d;
 }
-
 .product-name{
     font-size: 16px;
     line-height: 32px;
     font-weight: 500;
     font-family: "Roboto", sans-serif;
     margin-bottom: 2px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .product-name:hover{
     color: #FC7C7C;

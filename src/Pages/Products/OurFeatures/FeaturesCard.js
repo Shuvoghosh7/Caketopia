@@ -13,8 +13,8 @@ const FeaturesCard = ({ Feature, handleClick }) => {
             <div className='Features-img'>
                 <img src={`https://caketopia-server-production.up.railway.app/api/v1/${imageUrl}`} alt="" />
             </div>
-            <p className='text-center details-btn'>
-                <button className='mt-1' onClick={() => handleClick(Feature)}>
+            <p className='text-center details-btn relative top-5'>
+                <button className='mt-2' onClick={() => handleClick(Feature)}>
                     <FiShoppingBag className='text-2xl shop-icon' />
                 </button>
                 <button>
