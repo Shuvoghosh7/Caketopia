@@ -9,15 +9,6 @@ const OurFeatures = ({ handleClick }) => {
             res.json()
         )
     )
-
-    const searchHandeal = (event) => {
-        setFilter(event.target.value)
-    }
-    let dataSearch = products.filter(item => {
-        return Object.keys(item).some(key =>
-            item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
-        )
-    })
     if (isLoading) {
         return <div className='flex justify-center'>
             <Bars
@@ -31,6 +22,14 @@ const OurFeatures = ({ handleClick }) => {
             />
         </div>
     }
+    const searchHandeal = (event) => {
+        setFilter(event.target.value)
+    }
+    let dataSearch = products?.filter(item => {
+        return Object.keys(item).some(key =>
+            item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
+        )
+    })
     
     return (
         <>
@@ -43,7 +42,7 @@ const OurFeatures = ({ handleClick }) => {
                         key={Feature.id}
                         Feature={Feature}
                         handleClick={handleClick}
-                    />):<h1 className='relative lg:left-[400px] text-3xl'>No Result Found</h1>
+                    />):<h1 className='relative lg:left-[500px] text-3xl'>No Result Found</h1>
                 }
             </div>
         </>

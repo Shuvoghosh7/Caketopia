@@ -26,7 +26,7 @@ const AllProduct = ({ handleClick }) => {
     const searchHandeal = (event) => {
         setFilter(event.target.value)
     }
-    let dataSearch = products.filter(item => {
+    let dataSearch = products?.filter(item => {
         return Object.keys(item).some(key =>
             item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
         )
