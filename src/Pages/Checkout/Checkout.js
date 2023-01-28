@@ -36,7 +36,7 @@ const Checkout = ({ props }) => {
             email: data.email,
             phone: data.phone,
         }
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/checkout', {
+        fetch('https://caketopia-server.onrender.com/api/v1/checkout', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -75,7 +75,7 @@ const Checkout = ({ props }) => {
                             storeCart?.map((item) => (
                                 <div className="cart_box" key={item.id}>
                                     <div className="cart_img">
-                                        <img src={`https://caketopia-server-production.up.railway.app/api/v1/${item.imageUrl}`} />
+                                        <img src={`https://caketopia-server.onrender.com/api/v1/${item.imageUrl}`} />
                                         <p>{item.productName} * {item.quantity} </p>
 
                                     </div>

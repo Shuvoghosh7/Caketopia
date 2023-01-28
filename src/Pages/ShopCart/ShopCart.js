@@ -28,7 +28,7 @@ const ShopCart = ({ cart, setCart, handleChange }) => {
                 storeCart?.map((item) => (
                     <div className="cart_box" key={item.id}>
                         <div className="cart_img">
-                            <img src={`https://caketopia-server-production.up.railway.app/api/v1/${item.imageUrl}`} />
+                            <img src={`https://caketopia-server.onrender.com/api/v1/${item.imageUrl}`} />
                             <p>{item.productName}</p>
                         </div>
                         <div>

@@ -7,7 +7,7 @@ const DemoProductCard = ({ Feature, handleClick }) => {
     return (
         <div className='Features-card'>
             <div className='Features-img'>
-                <img src={`https://caketopia-server-production.up.railway.app/api/v1/${imageUrl}`} alt="" />
+                <img src={`https://caketopia-server.onrender.com/api/v1/${imageUrl}`} alt="" />
             </div>
             <p className='text-center details-btn'>
                 <button className='mt-1' onClick={() => handleClick(Feature)}>

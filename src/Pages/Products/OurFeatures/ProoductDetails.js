@@ -7,7 +7,7 @@ import { BsEyeSlashFill } from 'react-icons/bs';
 const ProoductDetails = ({ handleClick }) => {
     const { productId } = useParams()
     const { isLoading, error, data: SingleProduct } = useQuery('SingleProduct', () =>
-        fetch(`https://caketopia-server-production.up.railway.app/api/v1/product/${productId}`).then(res => res.json()
+        fetch(`https://caketopia-server.onrender.com/api/v1/product/${productId}`).then(res => res.json()
 
         )
     )
@@ -22,7 +22,7 @@ const ProoductDetails = ({ handleClick }) => {
         <>
             <div className='lg:flex md:flex justify-around items-center my-5 lg:mx-20 mx-5 details-page'>
                 <div className='details-image'>
-                    <img src={`https://caketopia-server-production.up.railway.app/api/v1/${SingleProduct.data.imageUrl}`} alt="" />
+                    <img src={`https://caketopia-server.onrender.com/api/v1/${SingleProduct.data.imageUrl}`} alt="" />
                 </div>
                 <div>
                     <p className='text-2xl font-bold mb-2'>{SingleProduct.data.productName}</p>

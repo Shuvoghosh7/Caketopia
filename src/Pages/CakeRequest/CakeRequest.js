@@ -3,7 +3,7 @@ import React from 'react';
 import './CakeRequest.css'
 const CakeRequest = () => {
 
-    const handelSubmit=(e)=>{
+    const handelSubmit = (e) => {
         e.preventDefault();
         let formData = new FormData();
         formData.set("yourName", e.target.yourName.value);
@@ -14,14 +14,14 @@ const CakeRequest = () => {
         formData.set("message", e.target.message.value);
         formData.set("cakeImage", e.target.images.files[0]);
         formData.set("weight", e.target.weight.value);
-        
-        axios.post('https://caketopia-server-production.up.railway.app/api/v1/cack-request', formData, {
+
+        axios.post('https://caketopia-server.onrender.com/api/v1/cack-request', formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },
         })
             .then((response) => {
-               
+
                 console.log('response', response.data)
 
             })
@@ -146,7 +146,7 @@ const CakeRequest = () => {
                                 className="input input-bordered bg-white  w-full lg:w-[550px] ml-2"
                                 name='weight'
                             />
-                            
+
                         </div>
 
                     </div>
@@ -156,7 +156,7 @@ const CakeRequest = () => {
 
 
                     <div className="modal-action w-full mx-auto m-5 flex justify-start">
-                        <input className='btn btn-accent text-white' type="submit" value="Make Request"/>
+                        <input className='btn btn-accent text-white' type="submit" value="Make Request" />
                     </div>
                 </form>
             </div>

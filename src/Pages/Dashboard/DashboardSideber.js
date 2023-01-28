@@ -8,7 +8,7 @@ const DashboardSideber = ({ children }) => {
     const jsonToken = localStorage.getItem('token')
     const tokenParse = JSON.parse(jsonToken)
     useEffect(() => {
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/me', {
+        fetch('https://caketopia-server.onrender.com/api/v1/user/me', {
             method: "GET",
             headers: {
                 'authorization': `Bearer ${tokenParse}`

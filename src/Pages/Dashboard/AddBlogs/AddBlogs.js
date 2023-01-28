@@ -18,7 +18,7 @@ const AddBlogs = () => {
         setDescription(value);
         console.log(value)
     }
- 
+
     const nameOfAuthor = (e) => {
         const { value } = e.target;
         setAuthorname(value);
@@ -46,7 +46,7 @@ const AddBlogs = () => {
         formData.append("authorName", authorname);
         formData.append("blogDate", blogDate);
 
-        axios.post('https://caketopia-server-production.up.railway.app/api/v1/blogs', formData, {
+        axios.post('https://caketopia-server.onrender.com/api/v1/blogs', formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             },

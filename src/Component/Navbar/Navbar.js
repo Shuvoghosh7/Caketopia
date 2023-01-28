@@ -24,7 +24,7 @@ const Navbar = ({ size }) => {
         } else setIcon("nav__toggler");
     };
     useEffect(() => {
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/me', {
+        fetch('https://caketopia-server.onrender.com/api/v1/user/me', {
             method: "GET",
             headers: {
                 'authorization': `Bearer ${tokenParse}`
@@ -33,9 +33,9 @@ const Navbar = ({ size }) => {
             .then(res => res.json())
             .then(data => setUser(data.data))
     }, [])
-    const logout=()=>{
+    const logout = () => {
         localStorage.clear()
-        window.location.reload(true) 
+        window.location.reload(true)
     }
     return (
         <nav className="nav">

@@ -8,7 +8,7 @@ const SingUp = () => {
 
     const onSubmit = async (data) => {
 
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/signup', {
+        fetch('https://caketopia-server.onrender.com/api/v1/user/signup', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

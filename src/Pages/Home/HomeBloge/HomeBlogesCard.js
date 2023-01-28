@@ -11,7 +11,7 @@ const HomeBlogesCard = ({ blog }) => {
             <Fade bottom>
                 <div className='blog-card'>
                     <div className='blog-img'>
-                        <img src={`https://caketopia-server-production.up.railway.app/api/v1/${imageUrl}`} alt="" />
+                        <img src={`https://caketopia-server.onrender.com/api/v1/${imageUrl}`} alt="" />
                     </div>
                     <Link to={`/blogsDetails/${_id}`} className='blog-details relative lg:left-[273px] lg:top-[-35px] md:left-[500px] md:top-[-35px] left-[183px] top-[-35px]'>
                         <FaArrowRight className='mt-4 ml-4' />

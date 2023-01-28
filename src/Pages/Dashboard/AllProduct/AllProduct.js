@@ -5,7 +5,7 @@ import { Bars } from 'react-loader-spinner'
 const AllProduct = ({ handleClick }) => {
     const [filter, setFilter] = useState('')
     const { isLoading, error, data: products } = useQuery('products', () =>
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/product').then(res =>
+        fetch('https://caketopia-server.onrender.com/api/v1/product').then(res =>
             res.json()
         )
     )

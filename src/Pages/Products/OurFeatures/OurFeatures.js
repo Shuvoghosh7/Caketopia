@@ -5,7 +5,7 @@ import { Bars } from 'react-loader-spinner'
 const OurFeatures = ({ handleClick }) => {
     const [filter, setFilter] = useState('')
     const { isLoading, error, data: products } = useQuery('products', () =>
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/product').then(res =>
+        fetch('https://caketopia-server.onrender.com/api/v1/product').then(res =>
             res.json()
         )
     )
@@ -30,7 +30,7 @@ const OurFeatures = ({ handleClick }) => {
             item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
         )
     })
-    
+
     return (
         <>
             <div className='flex lg:justify-end md:justify-end justify-center lg:mr-12 md:mr-12 mt-3'>
@@ -42,7 +42,7 @@ const OurFeatures = ({ handleClick }) => {
                         key={Feature.id}
                         Feature={Feature}
                         handleClick={handleClick}
-                    />):<h1 className='relative lg:left-[500px] text-3xl'>No Result Found</h1>
+                    />) : <h1 className='relative lg:left-[500px] text-3xl'>No Result Found</h1>
                 }
             </div>
         </>

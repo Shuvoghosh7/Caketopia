@@ -18,7 +18,7 @@ const SingIn = () => {
 
     const onSubmit = async (data) => {
 
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/user/login', {
+        fetch('https://caketopia-server.onrender.com/api/v1/user/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -28,9 +28,9 @@ const SingIn = () => {
             .then(res => res.json())
             .then(project => {
                 localStorage.setItem("token", JSON.stringify(project.data.token))
-                window.location.reload(true) 
+                window.location.reload(true)
             })
-            
+
     }
     return (
         <div className='loging-page'>
@@ -70,7 +70,7 @@ const SingIn = () => {
                         />
                     </div>
                     <div className="modal-action w-full mx-auto m-5">
-                        <input className='btn  text-white w-full' type="submit" value="SING UP"/>
+                        <input className='btn  text-white w-full' type="submit" value="SING UP" />
                     </div>
                 </form>
                 <p className='text-center'>Don't Have an Account Yet? <span className='text-blue-700'><Link to='/singup'>Singup</Link></span></p>

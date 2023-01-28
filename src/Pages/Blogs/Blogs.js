@@ -7,7 +7,7 @@ import { Bars } from 'react-loader-spinner'
 
 const Blogs = () => {
     const { isLoading, error, data: blogs } = useQuery('blogs', () =>
-        fetch('https://caketopia-server-production.up.railway.app/api/v1/blogs').then(res =>
+        fetch('https://caketopia-server.onrender.com/api/v1/blogs').then(res =>
             res.json()
         )
     )
