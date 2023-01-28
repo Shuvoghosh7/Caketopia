@@ -61,7 +61,7 @@ const Addproduct = () => {
         })
             .then((response) => {
                 console.log('response', response.data)
-
+                window.location.reload(true)
             })
             .catch((error) => {
                 console.log(error.response)

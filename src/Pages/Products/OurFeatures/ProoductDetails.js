@@ -22,7 +22,7 @@ const ProoductDetails = ({ handleClick }) => {
         <>
             <div className='lg:flex md:flex justify-around items-center my-5 lg:mx-20 mx-5 details-page'>
                 <div className='details-image'>
-                    <img src={`https://caketopia-server.onrender.com/api/v1/${SingleProduct.data.imageUrl}`} alt="" />
+                    <img src={`https://caketopia-server.onrender.com/api/v1/${SingleProduct.data.imageUrl[0]}`} alt="" />
                 </div>
                 <div>
                     <p className='text-2xl font-bold mb-2'>{SingleProduct.data.productName}</p>
