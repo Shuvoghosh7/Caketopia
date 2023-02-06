@@ -100,42 +100,43 @@ const SingUp = () => {
                     </div>
 
 
-                    <div className='flex'>
-                        <div className="form-control w-full mx-auto">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input
-                                type="password"
-                                placeholder="Your Emain"
-                                className="input input-bordered bg-white  w-full lg:w-[200px]"
-                                {...register("password", {
-                                    required: {
-                                        value: true,
-                                        message: "name is required"
-                                    }
-                                })}
-                            />
-                        </div>
 
-                        <div className="form-control w-full mx-auto">
-                            <label className="label">
-                                <span className="label-text">Confirm Password</span>
-                            </label>
-                            <input
-                                type="password"
-                                placeholder="Confirm Password"
-                                className="input input-bordered bg-white  w-full lg:w-[200px] ml-2"
-                                {...register("confirmPassword", {
-                                    required: {
-                                        value: true,
-                                        message: "name is required"
-                                    }
-                                })}
-                            />
-                        </div>
-
+                    <div className="form-control w-full mx-auto">
+                        <label className="label">
+                            <span className="label-text">Password</span>
+                        </label>
+                        <input
+                            type="password"
+                            placeholder="password"
+                            className="input input-bordered bg-white  w-full "
+                            {...register("password", {
+                                required: {
+                                    value: true,
+                                    message: "name is required"
+                                }
+                            })}
+                        />
                     </div>
+                    <small className='font-medium text-center text-red-600'>Password Should Be minLength-6 min Lowercase-3 min Uppercase-1,minNumbers- 1,minSymbols-1</small>
+
+                    <div className="form-control w-full mx-auto">
+                        <label className="label">
+                            <span className="label-text">Confirm Password</span>
+                        </label>
+                        <input
+                            type="password"
+                            placeholder="Confirm Password"
+                            className="input input-bordered bg-white  w-full ml-2"
+                            {...register("confirmPassword", {
+                                required: {
+                                    value: true,
+                                    message: "name is required"
+                                }
+                            })}
+                        />
+                    </div>
+
+
 
                     <div className='flex'>
                         <div className="form-control w-full mx-auto">
