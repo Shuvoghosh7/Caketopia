@@ -39,7 +39,7 @@ const OurFeatures = ({ handleClick }) => {
             <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-10 mx-12 mt-10'>
                 {
                     dataSearch.length > 0 ? dataSearch?.map(Feature => <FeaturesCard
-                        key={Feature.id}
+                        key={Feature._id}
                         Feature={Feature}
                         handleClick={handleClick}
                     />) : <h1 className='relative lg:left-[500px] text-3xl'>No Result Found</h1>

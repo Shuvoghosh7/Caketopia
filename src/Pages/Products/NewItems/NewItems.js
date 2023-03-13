@@ -26,7 +26,7 @@ const NewItems = ({ handleClick }) => {
         <div className='grid lg:grid-cols-4 gap-10 mx-12 mt-10'>
             {
                 products?.slice(Math.max(products.length - 4)).map(Feature => <NewItemsCard
-                    key={Feature.id}
+                    key={Feature._id}
                     Feature={Feature}
                     handleClick={handleClick}
                 />)

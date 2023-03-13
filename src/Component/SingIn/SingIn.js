@@ -29,6 +29,7 @@ const SingIn = () => {
             .then(project => {
                 localStorage.setItem("token", JSON.stringify(project.data.token))
                 window.location.reload(true)
+                console.log(project)
             })
 
     }

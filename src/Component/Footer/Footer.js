@@ -104,7 +104,7 @@ const Footer = () => {
                     <p className='contact-us mb-6'>NEWSLETTER</p>
                     <p className='mb-6'>If you have any question.please contact us at <span className='text-[#fc7c7c] text-lg'>Send Us a Email</span></p>
                     <form className='newsletter_subscribe'>
-                        <input id="mc-email" type="email" autocomplete="off" placeholder="Email Address" name="EMAIL" />
+                        <input id="mc-email" type="email" autoComplete="off" placeholder="Email Address" name="EMAIL" />
                         <button className='email-send-btn'>Send</button>
                     </form>
                     <img src={paypal} alt="" className='mt-5'/>

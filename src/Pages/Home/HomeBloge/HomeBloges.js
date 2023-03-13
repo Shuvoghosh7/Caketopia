@@ -32,7 +32,7 @@ const HomeBloges = () => {
             <div className='grid lg:grid-cols-3 gap-10 mx-12 mt-10'>
                 {
                     blogs.data?.slice(-3).map(blog => <HomeBlogesCard
-                        key={blog.id}
+                        key={blog._id}
                         blog={blog}
                     />)
                 }
